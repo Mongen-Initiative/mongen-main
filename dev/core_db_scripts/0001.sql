@@ -255,3 +255,14 @@ VALUES
 ('ZA', 'ZAF', '27', 'South Africa', now()),
 ('ZM', 'ZMB', '260', 'Zambia', now()),
 ('ZW', 'ZWE', '263', 'Zimbabwe', now());
+
+CREATE TABLE collaborator_type(
+   id bigint PRIMARY KEY,
+   name character(255),
+   created date
+);
+
+INSERT INTO collaborator_type (id, name, created)
+VALUES
+(1, 'Administrator', now()),
+(2, 'Collaborator', now());
