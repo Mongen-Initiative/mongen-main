@@ -30,10 +30,13 @@ services:
       - '9229:9229'
     environment:
       - NODE_ENV=development
+      - MONGEN_CORE_URL=http://localhost:8080
+      - MONGEN_MEDIA_URL=http://localhost:9090
     networks:
       - mongen-network
     links:
       - mongen_core
+      - mongen_media
 
   db:
     image: "postgres:12"
