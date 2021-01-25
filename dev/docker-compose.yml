@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  mongen_core:
+  mongen-core:
     container_name: mongen_core_dev
     build:
       context: ${HOME}/mongen/mongen-core
@@ -18,7 +18,7 @@ services:
       - db
 
 
-  mongen_frontend:
+  mongen-frontend:
     container_name: mongen_frontend_dev
     build:
       context: ${HOME}/mongen/mongen-frontend
@@ -31,12 +31,13 @@ services:
     environment:
       - NODE_ENV=development
       - MONGEN_CORE_URL=http://localhost:8080
+      - MONGEN_CORE_INTERNAL_URL=http://mongen-core:8080
       - MONGEN_MEDIA_URL=http://localhost:9090
     networks:
       - mongen-network
     links:
-      - mongen_core
-      - mongen_media
+      - mongen-core
+      - mongen-media
 
   db:
     image: "postgres:12"
@@ -59,7 +60,7 @@ services:
       retries: 5
 
 
-  mongen_media:
+  mongen-media:
     container_name: mongen_media_dev
     build:
       context: ${HOME}/mongen/mongen-media
@@ -75,11 +76,11 @@ services:
       - '9090:9090'
     restart: on-failure
     links:
-      - media_db
+      - media-db
     depends_on:
-      - media_db
+      - media-db
 
-  media_db:
+  media-db:
     image: "postgres:12"
     container_name: mongen_media_db_dev
     environment:
