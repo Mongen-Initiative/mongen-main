@@ -8,10 +8,12 @@ services:
       dockerfile: ${HOME}/mongen/mongen-core/dev/Dockerfile
     ports:
       - 8080:8080
+    environment:
+      - DATABASE_URL=postgres://mongen:123123@db:5432/mongen_db
     networks:
       - mongen-network
     volumes:
-      - ${HOME}/mongen/mongen-core:/app/mongen-core
+      - ${HOME}/mongen/mongen-core:/app
     links:
       - db
     depends_on:
