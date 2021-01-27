@@ -69,7 +69,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - APP_SETTINGS=config.DevelopmentConfig
-      - DATABASE_URL=postgresql://mongen:123123@media_db/mongen_media_db
+      - DATABASE_URL=postgresql://mongen:123123@media-db/mongen_media_db
     volumes:
       - '${HOME}/mongen/mongen-media:/app'
     networks:
