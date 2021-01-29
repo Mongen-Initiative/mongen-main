@@ -31,6 +31,16 @@ In order to enable remote debugging for Mongen Core service for
 
   ![Screenshot of IntelliJ Config](intellij_config.png)
 
+  - In order to enable hot reload:
+    - Go to Preferences → Build, Execution, Deployment → Compiler
+    - Check the option "Build project automatically"
+
+    ![Screenshot of IntelliJ Project](intellij_build_project.png)
+
+    - Apply the changes, and then press Ctrl+Shift+A (or ⌘+Shift+A on Mac) type "Registry", and once the registry window is open, locate and enable `compiler.automake.allow.when.app.running`
+
+    ![Screenshot of IntelliJ Registry](intellij_registry.png)
+
 - Eclipse:
   - Go to Run -> Run Configurations -> Java Application -> New
   - Choose `org.springframework.boot.devtools.RemoteSpringApplication` as the `main class`
