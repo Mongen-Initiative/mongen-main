@@ -41,8 +41,12 @@ In order to enable remote debugging for Mongen Core service for
 
     ![Screenshot of IntelliJ Registry](intellij_registry.png)
 
+    - Then just select the `Spring Boot Remote Devtools` configuration and start debugging
+
+    ![Screenshot of IntelliJ Debug](intellij_debug.png)
+
 - Eclipse:
   - Go to Run -> Run Configurations -> Java Application -> New
   - Choose `org.springframework.boot.devtools.RemoteSpringApplication` as the `main class`
-  - Choose `hotreload` as the project
+  - Choose `mongen-backend` as the project
   - Set http://localhost:8080 to program arguments
