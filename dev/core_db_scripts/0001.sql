@@ -266,3 +266,9 @@ INSERT INTO collaborator_type (id, name, created)
 VALUES
 (1, 'Administrator', now()),
 (2, 'Collaborator', now());
+
+INSERT INTO organization_status (id, name, created)
+VALUES
+(1, 'Draft', now()),
+(2, 'Published', now()),
+(3, 'Disabled', now());
