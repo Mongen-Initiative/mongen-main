@@ -267,6 +267,12 @@ VALUES
 (1, 'Administrator', now()),
 (2, 'Collaborator', now());
 
+CREATE TABLE organization_status(
+   id bigint PRIMARY KEY,
+   name character(255),
+   created date
+);
+
 INSERT INTO organization_status (id, name, created)
 VALUES
 (1, 'Draft', now()),
