@@ -275,6 +275,8 @@ CREATE TABLE organization_status(
 
 INSERT INTO organization_status (id, name, created)
 VALUES
-(1, 'Draft', now()),
-(2, 'Published', now()),
-(3, 'Disabled', now());
+(1, 'Pending', now()),
+(2, 'Draft', now()),
+(3, 'Published', now()),
+(4, 'Disabled', now()),
+(5, 'Under Review', now());
