@@ -266,3 +266,17 @@ INSERT INTO collaborator_type (id, name, created)
 VALUES
 (1, 'Administrator', now()),
 (2, 'Collaborator', now());
+
+CREATE TABLE organization_status(
+   id bigint PRIMARY KEY,
+   name character(255),
+   created date
+);
+
+INSERT INTO organization_status (id, name, created)
+VALUES
+(1, 'Pending', now()),
+(2, 'Draft', now()),
+(3, 'Published', now()),
+(4, 'Disabled', now()),
+(5, 'Under Review', now());
