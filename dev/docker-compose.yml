@@ -101,6 +101,22 @@ services:
       timeout: 5s
       retries: 5
 
+  keycloak:
+    image: "jboss/keycloak"
+    container_name: mongen_keycloak_dev
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=adin
+      - DB_VENDOR=POSTGRES
+      - DB_ADDR=mongen_db
+      - DB_PORT=5432
+      - DB_DATABASE=keycloak
+      - DB_USER=mongen
+      - DB_PASSWORD=123123
+    networks:
+      - mongen-network
+    ports:
+      - '8095:8095'
 
 networks:
   mongen-network:
