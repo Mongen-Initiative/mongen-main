@@ -106,7 +106,7 @@ services:
     container_name: mongen_keycloak_dev
     environment:
       - KEYCLOAK_USER=admin
-      - KEYCLOAK_PASSWORD=adin
+      - KEYCLOAK_PASSWORD=admin
     networks:
       - mongen-network
     ports:
