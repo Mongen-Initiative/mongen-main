@@ -107,12 +107,11 @@ services:
     environment:
       - KEYCLOAK_USER=admin
       - KEYCLOAK_PASSWORD=admin
-      - DB_VENDOR=postgres
-      - DB_ADDR=mongen_db
-      - DB_PORT=5432
-      - DB_DATABASE=keycloak
-      - DB_USER=mongen
-      - DB_PASSWORD=123123
+      # - DB_VENDOR=postgres
+      # - DB_ADDR=postgres://mongen:123123@db:5432/mongen_db
+      # - DB_DATABASE=mongen_db
+      # - DB_USER=mongen
+      # - DB_PASSWORD=123123
     networks:
       - mongen-network
     ports:
